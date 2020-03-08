@@ -1,0 +1,4 @@
+C:\Users\Олег\Desktop\NeuralNetworkHelperPack\bin\Debug\NeuralNetworkHelperPack.dll
+C:\Users\Олег\Desktop\NeuralNetworkHelperPack\bin\Debug\NeuralNetworkHelperPack.pdb
+C:\Users\Олег\Desktop\NeuralNetworkHelperPack\obj\Debug\NeuralNetworkHelperPack.dll
+C:\Users\Олег\Desktop\NeuralNetworkHelperPack\obj\Debug\NeuralNetworkHelperPack.pdb
