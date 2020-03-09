@@ -1,6 +1,6 @@
 ﻿namespace NeuralNetworkHelperPack.NeuralNetworkStructure
 {
-    public interface IHiddenLayer
+    public interface IRBFHiddenLayer
     {
         int HiddenNeuronCount { get; }
         bool IsOffsetNeuron { get; }

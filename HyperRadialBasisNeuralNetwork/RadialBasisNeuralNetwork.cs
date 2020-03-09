@@ -6,27 +6,29 @@ using System.Threading.Tasks;
 using NeuralNetworkHelperPack.Functions;
 using NeuralNetworkHelperPack.NeuralNetworkStructure;
 
-namespace HyperRadialBasisNeuralNetworkNameSpace
+namespace HyperRadialBasisNeuralNetwork
 {
-    public class RadialBasisNeuralNetwork : INeuralNetwork
+    public class RadialBasisNeuralNetwork : IRBFNeuralNetwork
     {
-        IHiddenLayer hiddenLayer;
+        IRBFHiddenLayer hiddenLayer;
 
         public int InputVectorDimension { get; }
+        public int OutputVectorDimension { get; }
         public int HiddenNeuronsCount { get; }
         public IRBFActivationFunction ActivationFunction { get; }
-        public IHiddenLayer HiddenLayer { get => hiddenLayer; }
+        public IRBFHiddenLayer HiddenLayer { get => hiddenLayer; }
 
         public RadialBasisNeuralNetwork(
               int inputVectorDimension
             , int hiddenNeuronsCount
-            , IHiddenLayer hiddenLayer
+            , IRBFHiddenLayer hiddenLayer
             , IRBFActivationFunction activationFunction)
         {
             InputVectorDimension = inputVectorDimension;
             HiddenNeuronsCount = hiddenNeuronsCount;
             this.hiddenLayer = hiddenLayer;
             ActivationFunction = activationFunction;
+            OutputVectorDimension = hiddenLayer.OutputVectorDimension;
         }
 
         public double[] CalculateOutput(double[] inputVector)
@@ -54,7 +56,6 @@ namespace HyperRadialBasisNeuralNetworkNameSpace
                             , inputVector
                         );
                 }
-
                 outputVector[outputIndex] = currentOutput;
             }
             return outputVector;

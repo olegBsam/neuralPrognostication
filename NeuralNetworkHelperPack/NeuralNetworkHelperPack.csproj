@@ -47,8 +47,14 @@
     <Compile Include="Initializers\IHiddenLayerInitializer.cs" />
     <Compile Include="Initializers\IRadiusInitializer.cs" />
     <Compile Include="Initializers\IWeightInitializer.cs" />
-    <Compile Include="NeuralNetworkStructure\IHiddenLayer.cs" />
+    <Compile Include="LearningAlgorithms\IDataSetPreprocessor.cs" />
+    <Compile Include="LearningAlgorithms\IErrorCalculator.cs" />
+    <Compile Include="LearningAlgorithms\ILearningCoefProcessor.cs" />
+    <Compile Include="LearningAlgorithms\INeuralNetworkParamEditor.cs" />
+    <Compile Include="LearningAlgorithms\BackPropLearningAlgorithm.cs" />
     <Compile Include="NeuralNetworkStructure\INeuralNetwork.cs" />
+    <Compile Include="NeuralNetworkStructure\IRBFHiddenLayer.cs" />
+    <Compile Include="NeuralNetworkStructure\IRBFNeuralNetwork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

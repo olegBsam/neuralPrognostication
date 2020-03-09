@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HyperRadialBasisNeuralNetwork.NeuralNetworkStructure
 {
-    public class HiddenLayer: IHiddenLayer
+    public class HiddenLayer: IRBFHiddenLayer
     {
         private double[][] Centers;
         private double[][] Radiuses;
