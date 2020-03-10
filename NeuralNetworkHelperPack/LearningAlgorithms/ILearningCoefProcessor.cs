@@ -2,7 +2,7 @@
 {
     public interface ILearningCoefProcessor
     {
-        object Init(double learningCoef);
-        object Get(object currentLearningCoef);
+        double Init(double learningCoef);
+        double Get(object currentLearningCoef);
     }
 }

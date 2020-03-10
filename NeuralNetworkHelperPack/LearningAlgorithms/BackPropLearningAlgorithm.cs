@@ -46,35 +46,30 @@ namespace NeuralNetworkHelperPack.LearningAlgorithms
             return result;
         }
 
-
         /// <summary>
-        /// ///ДОБАВЛЕНИЕ В КОНЕЦ РЕЗУЛЬТАТА РАБОТЫ НЕЙРОНКИ
+        /// Добавляет получаемые прогнозы в окно прогнозирования
         /// </summary>
-        /// <param name="iterationCount"></param>
-        /// <param name="learningCoef"></param>
-        /// <param name="coefProcessor"></param>
-        /// <returns></returns>
         public LearningResultSet PrognosticationLearning(int iterationCount, double learningCoef, ILearningCoefProcessor coefProcessor)
         {
             var result = new LearningResultSet();
             var currentLearningCoef = coefProcessor.Init(learningCoef);
-            var prognosticFrame = new List<double>;
+            var prognosticFrame = learningDataSet[0].PreviousSet.ToList();
 
             for (int currentLearningIteration = 0; currentLearningIteration < iterationCount; currentLearningIteration++)
             {
                 currentLearningCoef = coefProcessor.Get(currentLearningCoef);
-
-                var currentLearningSet = learningDataSet[currentLearningIteration];
-
-
-
-                var oneStepResult = OneLearningStep(currentLearningCoef, currentLearningIteration, currentLearningSet);
+                var oneStepResult = OneLearningStep(currentLearningCoef, currentLearningIteration, (prognosticFrame.ToArray(), learningDataSet[currentLearningIteration].PrognosticationValue));
                 result.Add(oneStepResult);
+
+                //Добавляем в конец окна прогнозирования значения, полученные на предыдущем этапе
+                prognosticFrame.AddRange(oneStepResult.NnOutputs);
+                prognosticFrame.RemoveRange(0, oneStepResult.NnOutputs.Length);
+
             }
             return result;
         }
 
-        private (double Error, double[] NnOutputs, double[] RealOutputs) OneLearningStep(object currentLearningCoef, int currentLearningIteration, (double[] PreviousSet, double[] PrognosticationValue) currentLearningSet)
+        private (double Error, double[] NnOutputs, double[] RealOutputs) OneLearningStep(double currentLearningCoef, int currentLearningIteration, (double[] PreviousSet, double[] PrognosticationValue) currentLearningSet)
         { 
             var nnOutput = neuralNetwork.CalculateOutput(currentLearningSet.PreviousSet);
             var error = neuralNetworkParamEditor.Edit(nnOutput, currentLearningSet, currentLearningCoef, currentLearningIteration, errorCalculator);

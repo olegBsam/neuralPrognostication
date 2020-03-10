@@ -59,7 +59,7 @@ namespace HyperRadialBasisNeuralNetwork.NeuralNetworkStructure
         public double GetOffsetNeuronsWeight(int outputIndex = 0) =>
            OffsetNeuronWeight[outputIndex];
 
-        public (double[] Center, double[] Radius, double Weight) GetNeuronByIndex(int neuronIndex, int outputIndex = 0) =>
+        public (double[] Center, double[] Radius, double Weight) GetNeuronParamByIndex(int neuronIndex, int outputIndex = 0) =>
             (Centers[neuronIndex], Radiuses[neuronIndex], Weights[outputIndex][neuronIndex]);
 
         public void SetNeuronByIndex(double[] center, double[] radius, double weight, int neuronIndex, int outputIndex = 0)
@@ -69,6 +69,20 @@ namespace HyperRadialBasisNeuralNetwork.NeuralNetworkStructure
             Weights[outputIndex][neuronIndex] = weight;
         }
 
+        public void SetOffsetNeuronsWeight(double weight, int outputIndex = 0)
+        {
+            OffsetNeuronWeight[outputIndex] = weight;
+        }
 
+        public void SetNeuronByIndex(double weight, int neuronIndex, int outputIndex = 0)
+        {
+            Weights[outputIndex][neuronIndex] = weight;
+        }
+
+        public void SetNeuronByIndex(double[] center, double[] radius, int neuronIndex, int outputIndex = 0)
+        {
+            Centers[neuronIndex] = center;
+            Radiuses[neuronIndex] = radius;
+        }
     }
 }

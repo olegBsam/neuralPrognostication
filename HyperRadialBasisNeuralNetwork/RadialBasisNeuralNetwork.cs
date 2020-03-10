@@ -48,7 +48,7 @@ namespace HyperRadialBasisNeuralNetwork
 
                 for (int neuronIndex = 0; neuronIndex < hiddenLayer.HiddenNeuronCount; neuronIndex++)
                 {
-                    (double[] center, double[] radius, double weight) = hiddenLayer.GetNeuronByIndex(neuronIndex, outputIndex);
+                    (double[] center, double[] radius, double weight) = hiddenLayer.GetNeuronParamByIndex(neuronIndex, outputIndex);
                     currentOutput += ActivationFunction.Calculate(
                               center
                             , radius

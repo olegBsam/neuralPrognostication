@@ -7,7 +7,5 @@
         int InputVectorDimension { get; }
         int HiddenNeuronsCount { get; }
         int OutputVectorDimension { get; }
-
-        double[] CalculateOutput(double[] inputVector);
     }
 }
