@@ -36,35 +36,64 @@
     <Reference Include="Accord, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
       <HintPath>..\MagDiplom\packages\Accord.3.8.0\lib\net462\Accord.dll</HintPath>
     </Reference>
+    <Reference Include="Accord.Extensions.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\MagDiplom\packages\Accord.Extensions.Core.3.0.1\lib\net45\Accord.Extensions.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Extensions.Math, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\MagDiplom\packages\Accord.Extensions.Math.3.0.1\lib\net45\Accord.Extensions.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math, Version=3.0.2.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\MagDiplom\packages\Accord.Math.3.0.2\lib\net45\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics, Version=3.0.2.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\MagDiplom\packages\Accord.Statistics.3.0.2\lib\net45\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="DotImaging.Primitives2D, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\MagDiplom\packages\DotImaging.Primitives2D.2.5.3\lib\net45\DotImaging.Primitives2D.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Functions\IActivationFunction.cs" />
+    <Compile Include="Functions\RBF\GaussActivationFunction.cs" />
+    <Compile Include="Functions\RBF\IRBFActivationFunction.cs" />
+    <Compile Include="Functions\HRBF\IHRBFActivationFunction.cs" />
     <Compile Include="Initializers\ICenterInitializer.cs" />
     <Compile Include="Initializers\IHiddenLayerInitializer.cs" />
+    <Compile Include="Initializers\IQInitializer.cs" />
     <Compile Include="Initializers\IRadiusInitializer.cs" />
     <Compile Include="Initializers\IWeightInitializer.cs" />
+    <Compile Include="Initializers\RandomHiddenLayerInitializer.cs" />
+    <Compile Include="Initializers\RandomRadiusInitializer.cs" />
+    <Compile Include="Initializers\RandomWeightInitializer.cs" />
+    <Compile Include="LearningAlgorithms\ErrorCalculator.cs" />
     <Compile Include="LearningAlgorithms\IDataSetPreprocessor.cs" />
     <Compile Include="LearningAlgorithms\IErrorCalculator.cs" />
     <Compile Include="LearningAlgorithms\ILearningCoefProcessor.cs" />
     <Compile Include="LearningAlgorithms\INeuralNetworkParamEditor.cs" />
     <Compile Include="LearningAlgorithms\BackPropLearningAlgorithm.cs" />
+    <Compile Include="LearningAlgorithms\NonePreprocessor.cs" />
     <Compile Include="LearningAlgorithms\RBFFastDescendParamEditor.cs" />
+    <Compile Include="LearningAlgorithms\SimpleLearningCoefProcessor.cs" />
     <Compile Include="MathExt.cs" />
+    <Compile Include="NeuralNetworkStructure\HRBFNetwork\IHRBFHiddenLayer.cs" />
+    <Compile Include="NeuralNetworkStructure\HRBFNetwork\IHRBFNeuralNetwork.cs" />
     <Compile Include="NeuralNetworkStructure\INeuralNetwork.cs" />
-    <Compile Include="NeuralNetworkStructure\IRBFHiddenLayer.cs" />
-    <Compile Include="NeuralNetworkStructure\IRBFNeuralNetwork.cs" />
+    <Compile Include="NeuralNetworkStructure\RBFNetwork\IRBFHiddenLayer.cs" />
+    <Compile Include="NeuralNetworkStructure\RBFNetwork\IRBFNeuralNetwork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

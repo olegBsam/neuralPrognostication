@@ -3,6 +3,6 @@
     public interface ILearningCoefProcessor
     {
         double Init(double learningCoef);
-        double Get(object currentLearningCoef);
+        double Get(double currentLearningCoef, int currentLearningIteration);
     }
 }

@@ -35,7 +35,7 @@ namespace NeuralNetworkHelperPack.LearningAlgorithms
                 for (int s = 0; s < neuralNetwork.OutputVectorDimension; s++)
                 {
                     (var c,var r, var w) = neuralNetwork.HiddenLayer.GetNeuronParamByIndex(i, s);
-                    dEdW[i, s] = activationFunction.dFdW(c, r, currentLearningSet.PreviousSet) * outputError[s] * currentLearningCoef;
+                    dEdW[i, s] = activationFunction.dEdWCoef(c, r, currentLearningSet.PreviousSet) * outputError[s] * currentLearningCoef;
                 }
             }
 
@@ -45,8 +45,8 @@ namespace NeuralNetworkHelperPack.LearningAlgorithms
                 {
                     var coef = outCoef[i] * currentLearningCoef;
                     (var c, var r, _) = neuralNetwork.HiddenLayer.GetNeuronParamByIndex(i);
-                    dEdC[i, j] = coef * activationFunction.dFdC(c, r, currentLearningSet.PreviousSet, j);
-                    dEdR[i, j] = coef * activationFunction.dFdR(c, r, currentLearningSet.PreviousSet, j);
+                    dEdC[i, j] = coef * activationFunction.dEdCCoef(c, r, currentLearningSet.PreviousSet, j);
+                    dEdR[i, j] = coef * activationFunction.dEdRCoef(c, r, currentLearningSet.PreviousSet, j);
                 }
             }
 

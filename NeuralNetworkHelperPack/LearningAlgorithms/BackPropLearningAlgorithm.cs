@@ -29,7 +29,21 @@ namespace NeuralNetworkHelperPack.LearningAlgorithms
             this.dataSetPreprocessor = dataSetPreprocessor;
             this.errorCalculator = errorCalculator;
             this.neuralNetworkParamEditor = neuralNetworkParamEditor;
-            this.learningDataSet = this.dataSetPreprocessor.Process(sourcesDataSet);
+            this.learningDataSet = this.dataSetPreprocessor.Process(sourcesDataSet, neuralNetwork.InputVectorDimension, neuralNetwork.OutputVectorDimension);
+        }
+
+        public (List<double[]> RealOutput, List<double[]> TestOutput) Test()
+        {
+            var realOutput = new List<double[]>();
+            var testOutput = new List<double[]>();
+
+            for (int i = 0; i < learningDataSet.Count; i++)
+            {
+                realOutput.Add(neuralNetwork.CalculateOutput(learningDataSet[i].PreviousSet));
+                testOutput.Add(learningDataSet[i].PrognosticationValue);
+            }
+
+            return (realOutput, testOutput);
         }
 
         public LearningResultSet Learning(int iterationCount, double learningCoef, ILearningCoefProcessor coefProcessor)
@@ -39,10 +53,15 @@ namespace NeuralNetworkHelperPack.LearningAlgorithms
 
             for (int currentLearningIteration = 0; currentLearningIteration < iterationCount; currentLearningIteration++)
             {
-                currentLearningCoef = coefProcessor.Get(currentLearningCoef);
-                var oneStepResult = OneLearningStep(currentLearningCoef, currentLearningIteration, learningDataSet[currentLearningIteration]);
-                result.Add(oneStepResult);
+                for (int i = 0; i < learningDataSet.Count(); i++)
+                {
+                    currentLearningCoef = coefProcessor.Get(currentLearningCoef, currentLearningIteration * i);
+                    var oneStepResult = OneLearningStep(currentLearningCoef, currentLearningIteration * i, learningDataSet[i]);
+                    result.Add(oneStepResult);
+                }
             }
+
+
             return result;
         }
 
@@ -53,17 +72,21 @@ namespace NeuralNetworkHelperPack.LearningAlgorithms
         {
             var result = new LearningResultSet();
             var currentLearningCoef = coefProcessor.Init(learningCoef);
-            var prognosticFrame = learningDataSet[0].PreviousSet.ToList();
 
             for (int currentLearningIteration = 0; currentLearningIteration < iterationCount; currentLearningIteration++)
             {
-                currentLearningCoef = coefProcessor.Get(currentLearningCoef);
-                var oneStepResult = OneLearningStep(currentLearningCoef, currentLearningIteration, (prognosticFrame.ToArray(), learningDataSet[currentLearningIteration].PrognosticationValue));
-                result.Add(oneStepResult);
+                var prognosticFrame = learningDataSet[0].PreviousSet.ToList();
+                for (int i = 0; i < learningDataSet.Count(); i++)
+                {
 
-                //Добавляем в конец окна прогнозирования значения, полученные на предыдущем этапе
-                prognosticFrame.AddRange(oneStepResult.NnOutputs);
-                prognosticFrame.RemoveRange(0, oneStepResult.NnOutputs.Length);
+                    currentLearningCoef = coefProcessor.Get(currentLearningCoef, currentLearningIteration * i);
+                    var oneStepResult = OneLearningStep(currentLearningCoef, currentLearningIteration * i, (prognosticFrame.ToArray(), learningDataSet[i].PrognosticationValue));
+                    result.Add(oneStepResult);
+
+                    //Добавляем в конец окна прогнозирования значения, полученные на предыдущем этапе
+                    prognosticFrame.AddRange(oneStepResult.NnOutputs);
+                    prognosticFrame.RemoveRange(0, oneStepResult.NnOutputs.Length);
+                }
 
             }
             return result;

@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RadialBasisNeuralNetwork.cs" />
-    <Compile Include="NeuralNetworkStructure\HiddenLayer.cs" />
+    <Compile Include="HRBF\HyperRadialBasisNeuralNetwork.cs" />
+    <Compile Include="HRBF\NeuralNetworkStructure\HyperRadialBasisHiddenLayer.cs" />
+    <Compile Include="RBF\RadialBasisNeuralNetwork.cs" />
+    <Compile Include="RBF\NeuralNetworkStructure\RadialBasisHiddenLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +52,9 @@
       <Project>{3590836E-17AE-4E82-814F-C015D9CCA5C1}</Project>
       <Name>NeuralNetworkHelperPack</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
