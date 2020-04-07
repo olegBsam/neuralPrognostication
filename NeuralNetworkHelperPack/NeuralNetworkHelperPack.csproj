@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Functions\HRBF\HRBFActivationFunction.cs" />
     <Compile Include="Functions\RBF\GaussActivationFunction.cs" />
     <Compile Include="Functions\RBF\IRBFActivationFunction.cs" />
     <Compile Include="Functions\HRBF\IHRBFActivationFunction.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Initializers\RandomRadiusInitializer.cs" />
     <Compile Include="Initializers\RandomWeightInitializer.cs" />
     <Compile Include="LearningAlgorithms\ErrorCalculator.cs" />
+    <Compile Include="LearningAlgorithms\HRBFFastDescendParamEditor.cs" />
     <Compile Include="LearningAlgorithms\IDataSetPreprocessor.cs" />
     <Compile Include="LearningAlgorithms\IErrorCalculator.cs" />
     <Compile Include="LearningAlgorithms\ILearningCoefProcessor.cs" />

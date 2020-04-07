@@ -20,6 +20,7 @@ namespace HyperRadialBasisNeuralNetwork.HRBF.NeuralNetworkStructure
         public HyperRadialBasisHiddenLayer(
               int hiddenNeuronCount
             , int inputVectorDimension
+            , int outputVectorDimension
             , ICenterInitializer centerInitializer
             , IQInitializer radiusInitializer
             , IWeightInitializer weightInitializer
@@ -30,7 +31,7 @@ namespace HyperRadialBasisNeuralNetwork.HRBF.NeuralNetworkStructure
             HiddenNeuronCount = hiddenNeuronCount;
             IsOffsetNeuron = isOffsetNeuron;
             InputVectorDimension = inputVectorDimension;
-
+            OutputVectorDimension = outputVectorDimension;
             ActivationFunction = activationFunction;
 
             hiddenLayerInitializer.Initialize(
