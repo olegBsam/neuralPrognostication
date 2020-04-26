@@ -33,5 +33,15 @@ namespace NeuralNetworkHelperPack
             }
             return result;
         }
+
+        public static double[][] CreateArr2(int i, int j)
+        {
+            var result = new double[i][];
+            for (int k = 0; k < i; k++)
+            {
+                result[k] = new double[j];
+            }
+            return result;
+        }
     }
 }

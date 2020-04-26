@@ -1,10 +1,14 @@
 ﻿using HyperRadialBasisNeuralNetwork;
 using HyperRadialBasisNeuralNetwork.HRBF.NeuralNetworkStructure;
 using HyperRadialBasisNeuralNetwork.NeuralNetworkStructure;
+using HyperRadialBasisNeuralNetwork.TSK;
+using HyperRadialBasisNeuralNetwork.TSK.TSKNeuralNetworkStructure;
 using NeuralNetworkHelperPack.Functions;
 using NeuralNetworkHelperPack.Functions.HRBF;
+using NeuralNetworkHelperPack.Initializers;
 using NeuralNetworkHelperPack.LearningAlgorithms;
 using NeuralNetworkHelperPack.NeuralNetworkStructure;
+using NeuralNetworkHelperPack.NeuralNetworkStructure.TSK;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +29,7 @@ namespace MagDiplom
             InitializeComponent();
         }
 
-        IHRBFNeuralNetwork nn;
+        INeuralNetwork nn;
 
 
         //private async void button1_Click(object sender, EventArgs e)
@@ -87,11 +91,11 @@ namespace MagDiplom
         //    );
         //}
 
+
+      
+
         private async void button1_Click(object sender, EventArgs e)
         {
-
-            var t = BitConverter.ToInt32(new byte[] { 248, 1, 0, 0 }, 0);
-
             button1.Enabled = false;
             await new TaskFactory().StartNew(() =>
             {
@@ -103,29 +107,39 @@ namespace MagDiplom
                 file = file.Select(o => o / max)
                     .ToList();
 
+               var tksInit = new TSKLayerInitializer(
+                       m: 3
+                     , n: 3
+                     , null
+                     , null
+                     , null
+                     , null);
 
-                IHRBFHiddenLayer hiddenLayer = new HyperRadialBasisHiddenLayer(
-                      28
-                    , 4
-                    , 1
-                    , null
-                    , null
-                    , null
-                    , new RandomHiddenLayerInitializer()
-                    , true
-                    , new HRBFActivationFunction()
+                ITSKFirstLayer tskFirstLayer = new TSKFirstLayer(tksInit);
+                ITSKSecondLayer tSKSecondLayer = new TSKSecondLayer(tksInit);
+                ITSKThirdLayer tSKThirdLayer = new TSKThirdLayer(tksInit);
+                ITSKFourthLayer tSKFourthLayer = new TSKFourthLayer();
+                ITSKFifthLayer tSKFifthLayer = new TSKFifthLayer();
+
+                nn = new TSKNeuralNetwork(
+                      tskFirstLayer
+                    , tSKSecondLayer
+                    , tSKThirdLayer
+                    , tSKFourthLayer
+                    , tSKFifthLayer
                     );
-                nn = new HyperRadialBasisNeuralNetwork.HyperRadialBasisNeuralNetwork(hiddenLayer);
 
                 var backPropLearningAlgorithm = new BackPropLearningAlgorithm(
                       nn
                     , file.ToArray()
                     , new NonePreprocessor()
                     , new ErrorCalculator()
-                    , new HRBFFastDescendParamEditor(nn)
+                    , new TSKFastDescendParamEditor((ITSKNeuralNetwork)nn)
                     );
+                
 
-                backPropLearningAlgorithm.Learning(800, 0.004, new SimpleLearningCoefProcessor());
+                backPropLearningAlgorithm.Learning(600
+                    , 0.004, new SimpleLearningCoefProcessor());
                 (var real, var test) = backPropLearningAlgorithm.Test();
                 var t1 = real.SelectMany(o => o).ToList();
                 var r1 = test.SelectMany(o => o).ToList();
@@ -145,5 +159,8 @@ namespace MagDiplom
             }
             );
         }
+
+
+     
     }
 }

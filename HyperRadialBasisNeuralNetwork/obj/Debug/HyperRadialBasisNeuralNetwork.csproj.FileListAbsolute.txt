@@ -21,3 +21,10 @@ C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\
 C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.dll
 C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Math.xml
 C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.xml
+C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Extensions.Core.dll
+C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Extensions.Math.dll
+C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Statistics.dll
+C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\DotImaging.Primitives2D.dll
+C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Extensions.Core.xml
+C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Extensions.Math.xml
+C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Statistics.xml

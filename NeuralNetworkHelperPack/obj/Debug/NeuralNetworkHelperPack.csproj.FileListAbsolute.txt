@@ -21,3 +21,8 @@ C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\
 C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\NeuralNetworkHelperPack\bin\Debug\Accord.Extensions.Math.xml
 C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\NeuralNetworkHelperPack\bin\Debug\Accord.Math.xml
 C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\NeuralNetworkHelperPack\bin\Debug\Accord.Statistics.xml
+C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\NeuralNetworkHelperPack\bin\Debug\EntityFramework.dll
+C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\NeuralNetworkHelperPack\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\NeuralNetworkHelperPack\bin\Debug\EntityFramework.xml
+C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\NeuralNetworkHelperPack\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\NeuralNetworkHelperPack\bin\Debug\ru\EntityFramework.resources.dll

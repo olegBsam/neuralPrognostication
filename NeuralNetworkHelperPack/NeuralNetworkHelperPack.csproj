@@ -51,7 +51,14 @@
     <Reference Include="DotImaging.Primitives2D, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\MagDiplom\packages\DotImaging.Primitives2D.2.5.3\lib\net45\DotImaging.Primitives2D.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\MagDiplom\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\MagDiplom\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
@@ -70,12 +77,16 @@
     <Compile Include="Functions\HRBF\IHRBFActivationFunction.cs" />
     <Compile Include="Initializers\ICenterInitializer.cs" />
     <Compile Include="Initializers\IHiddenLayerInitializer.cs" />
+    <Compile Include="Initializers\IPInitializer.cs" />
     <Compile Include="Initializers\IQInitializer.cs" />
     <Compile Include="Initializers\IRadiusInitializer.cs" />
+    <Compile Include="Initializers\ITSKLayerInitializer.cs" />
     <Compile Include="Initializers\IWeightInitializer.cs" />
+    <Compile Include="Initializers\PInitializer.cs" />
     <Compile Include="Initializers\RandomHiddenLayerInitializer.cs" />
     <Compile Include="Initializers\RandomRadiusInitializer.cs" />
     <Compile Include="Initializers\RandomWeightInitializer.cs" />
+    <Compile Include="Initializers\TSKLayerInitializer.cs" />
     <Compile Include="LearningAlgorithms\ErrorCalculator.cs" />
     <Compile Include="LearningAlgorithms\HRBFFastDescendParamEditor.cs" />
     <Compile Include="LearningAlgorithms\IDataSetPreprocessor.cs" />
@@ -86,17 +97,27 @@
     <Compile Include="LearningAlgorithms\NonePreprocessor.cs" />
     <Compile Include="LearningAlgorithms\RBFFastDescendParamEditor.cs" />
     <Compile Include="LearningAlgorithms\SimpleLearningCoefProcessor.cs" />
+    <Compile Include="LearningAlgorithms\TSKFastDescendParamEditor.cs" />
     <Compile Include="MathExt.cs" />
     <Compile Include="NeuralNetworkStructure\HRBFNetwork\IHRBFHiddenLayer.cs" />
     <Compile Include="NeuralNetworkStructure\HRBFNetwork\IHRBFNeuralNetwork.cs" />
     <Compile Include="NeuralNetworkStructure\INeuralNetwork.cs" />
     <Compile Include="NeuralNetworkStructure\RBFNetwork\IRBFHiddenLayer.cs" />
     <Compile Include="NeuralNetworkStructure\RBFNetwork\IRBFNeuralNetwork.cs" />
+    <Compile Include="NeuralNetworkStructure\TSK\ITSKFifthLayer.cs" />
+    <Compile Include="NeuralNetworkStructure\TSK\ITSKFirstLayer.cs" />
+    <Compile Include="NeuralNetworkStructure\TSK\ITSKFourthLayer.cs" />
+    <Compile Include="NeuralNetworkStructure\TSK\ITSKNeuralNetwork.cs" />
+    <Compile Include="NeuralNetworkStructure\TSK\ITSKSecondLayer.cs" />
+    <Compile Include="NeuralNetworkStructure\TSK\ITSKThirdLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Functions\TSK\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\MagDiplom\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\MagDiplom\packages\Accord.3.8.0\build\Accord.targets')" />

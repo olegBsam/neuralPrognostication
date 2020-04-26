@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,8 +33,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accord, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NeuralNetworkHelperPack\bin\Debug\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Extensions.Core">
+      <HintPath>..\NeuralNetworkHelperPack\bin\Debug\Accord.Extensions.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Extensions.Math">
+      <HintPath>..\NeuralNetworkHelperPack\bin\Debug\Accord.Extensions.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NeuralNetworkHelperPack\bin\Debug\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics">
+      <HintPath>..\NeuralNetworkHelperPack\bin\Debug\Accord.Statistics.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +66,12 @@
     <Compile Include="RBF\RadialBasisNeuralNetwork.cs" />
     <Compile Include="RBF\NeuralNetworkStructure\RadialBasisHiddenLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TSK\TSKNeuralNetwork.cs" />
+    <Compile Include="TSK\TSKNeuralNetworkStructure\TSKFifthLayer.cs" />
+    <Compile Include="TSK\TSKNeuralNetworkStructure\TSKFirstLayer.cs" />
+    <Compile Include="TSK\TSKNeuralNetworkStructure\TSKFourthLayer.cs" />
+    <Compile Include="TSK\TSKNeuralNetworkStructure\TSKSecondLayer.cs" />
+    <Compile Include="TSK\TSKNeuralNetworkStructure\TSKThirdLayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NeuralNetworkHelperPack\NeuralNetworkHelperPack.csproj">
@@ -56,5 +82,6 @@
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
