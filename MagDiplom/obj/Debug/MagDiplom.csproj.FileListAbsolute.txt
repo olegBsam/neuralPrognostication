@@ -35,3 +35,31 @@ C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\
 C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\Accord.Extensions.Math.xml
 C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\Accord.Math.xml
 C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\Accord.Statistics.xml
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\Accord.dll.config
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\MagDiplom.exe.config
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\MagDiplom.exe
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\MagDiplom.pdb
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\Accord.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\Accord.Extensions.Core.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\Accord.Extensions.Math.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\Accord.Math.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\Accord.Statistics.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\DotImaging.Primitives2D.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\HyperRadialBasisNeuralNetwork.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\NeuralNetworkHelperPack.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\HyperRadialBasisNeuralNetwork.pdb
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\HyperRadialBasisNeuralNetwork.dll.config
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\NeuralNetworkHelperPack.pdb
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\NeuralNetworkHelperPack.dll.config
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\Accord.xml
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\Accord.Extensions.Core.xml
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\Accord.Extensions.Math.xml
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\Accord.Math.xml
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\bin\Debug\Accord.Statistics.xml
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\obj\Debug\MagDiplom.csprojAssemblyReference.cache
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\obj\Debug\MagDiplom.MainForm.resources
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\obj\Debug\MagDiplom.Properties.Resources.resources
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\obj\Debug\MagDiplom.csproj.GenerateResource.cache
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\obj\Debug\MagDiplom.csproj.CopyComplete
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\obj\Debug\MagDiplom.exe
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\MagDiplom\obj\Debug\MagDiplom.pdb

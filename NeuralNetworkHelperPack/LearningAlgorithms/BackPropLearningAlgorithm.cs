@@ -32,38 +32,58 @@ namespace NeuralNetworkHelperPack.LearningAlgorithms
             this.learningDataSet = this.dataSetPreprocessor.Process(sourcesDataSet, neuralNetwork.InputVectorDimension, neuralNetwork.OutputVectorDimension);
         }
 
-        public (List<double[]> RealOutput, List<double[]> TestOutput) Test()
+        public (List<double[]> RealOutput, List<double[]> TestOutput) Test(int volume)
         {
             var realOutput = new List<double[]>();
             var testOutput = new List<double[]>();
 
-            for (int i = 0; i < learningDataSet.Count; i++)
+            var testSet = learningDataSet.GetRange(learningDataSet.Count() - volume, volume);
+
+            for (int i = 0; i < testSet.Count; i++)
             {
-                realOutput.Add(neuralNetwork.CalculateOutput(learningDataSet[i].PreviousSet));
-                testOutput.Add(learningDataSet[i].PrognosticationValue);
+                realOutput.Add(neuralNetwork.CalculateOutput(testSet[i].PreviousSet));
+                testOutput.Add(testSet[i].PrognosticationValue);
             }
 
             return (realOutput, testOutput);
         }
 
-        public LearningResultSet Learning(int iterationCount, double learningCoef, ILearningCoefProcessor coefProcessor)
+        public List<double> Learning(int iterationCount, double learningCoef, ILearningCoefProcessor coefProcessor)
         {
-            var result = new LearningResultSet();
+            var result = new List<double>();
             var currentLearningCoef = coefProcessor.Init(learningCoef);
 
             for (int currentLearningIteration = 0; currentLearningIteration < iterationCount; currentLearningIteration++)
             {
+                var oneStepErrors = new List<double>();
                 for (int i = 0; i < learningDataSet.Count(); i++)
                 {
                     currentLearningCoef = coefProcessor.Get(currentLearningCoef, currentLearningIteration * i);
-                    var oneStepResult = OneLearningStep(currentLearningCoef, currentLearningIteration * i, learningDataSet[i]);
-                    result.Add(oneStepResult);
+                    oneStepErrors.Add(OneLearningStep(currentLearningCoef, currentLearningIteration * i, learningDataSet[i]).Error);
                 }
+                result.Add(oneStepErrors.Max());
             }
-
-
             return result;
         }
+
+        //public LearningResultSet Learning(int iterationCount, double learningCoef, ILearningCoefProcessor coefProcessor)
+        //{
+        //    var result = new LearningResultSet();
+        //    var currentLearningCoef = coefProcessor.Init(learningCoef);
+
+        //    for (int currentLearningIteration = 0; currentLearningIteration < iterationCount; currentLearningIteration++)
+        //    {
+        //        for (int i = 0; i < learningDataSet.Count(); i++)
+        //        {
+        //            currentLearningCoef = coefProcessor.Get(currentLearningCoef, currentLearningIteration * i);
+        //            var oneStepResult = OneLearningStep(currentLearningCoef, currentLearningIteration * i, learningDataSet[i]);
+        //            result.Add(oneStepResult);
+        //        }
+        //    }
+
+
+        //    return result;
+        //}
 
         /// <summary>
         /// Добавляет получаемые прогнозы в окно прогнозирования

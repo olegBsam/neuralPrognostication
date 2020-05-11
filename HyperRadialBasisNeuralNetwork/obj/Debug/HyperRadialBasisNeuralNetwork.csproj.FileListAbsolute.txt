@@ -28,3 +28,25 @@ C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\
 C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Extensions.Core.xml
 C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Extensions.Math.xml
 C:\Users\Олег\Desktop\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Statistics.xml
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.dll.config
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\HyperRadialBasisNeuralNetwork.dll.config
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\HyperRadialBasisNeuralNetwork.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\HyperRadialBasisNeuralNetwork.pdb
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Extensions.Core.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Extensions.Math.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Math.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Statistics.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\NeuralNetworkHelperPack.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\DotImaging.Primitives2D.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\NeuralNetworkHelperPack.pdb
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\NeuralNetworkHelperPack.dll.config
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.xml
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Extensions.Core.xml
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Extensions.Math.xml
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Math.xml
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\bin\Debug\Accord.Statistics.xml
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\obj\Debug\HyperRadialBasisNeuralNetwork.csprojAssemblyReference.cache
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\obj\Debug\HyperRadialBasisNeuralNetwork.csproj.CopyComplete
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\obj\Debug\HyperRadialBasisNeuralNetwork.dll
+C:\Users\Олег\Desktop\МАГИСТРАТУРА ДИПЛОМ\MagDiplom\neuralPrognostication\neuralPrognostication\HyperRadialBasisNeuralNetwork\obj\Debug\HyperRadialBasisNeuralNetwork.pdb
